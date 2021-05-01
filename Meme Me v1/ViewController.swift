@@ -164,6 +164,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
 }
 
+// MARK: Meme model
+
 struct Meme {
     var topText: String
     var bottomText: String
