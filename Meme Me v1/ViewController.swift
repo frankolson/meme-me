@@ -43,9 +43,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         let meme = Meme(topText: topTextField.text!, bottomText: bottomTextField.text!, originalImage: imagePickerView.image!, memeImage: generateMemedImage())
         
         let controller = UIActivityViewController(activityItems: [meme.memeImage], applicationActivities: nil)
+        
+        // picked up the following from this site:
+        // https://www.swiftdevcenter.com/uiactivityviewcontroller-tutorial-by-example/
         controller.completionWithItemsHandler = { (activityType: UIActivity.ActivityType?, completed: Bool, items: [Any]?, error: Error?) in
             if completed {
-                print("Completed")
+                // picked up the following from this site:
+                // https://www.hackingwithswift.com/example-code/media/uiimagewritetosavedphotosalbum-how-to-write-to-the-ios-photo-album
                 UIImageWriteToSavedPhotosAlbum(meme.memeImage, self, #selector(self.saveResults(_:didFinishSavingWithError:contextInfo:)), nil)
             }
             
@@ -136,6 +140,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     @objc func keyboardWillShow(_ notification: Notification) {
+        // got the idea to check for an active field from this post:
+        // https://stackoverflow.com/questions/28813339/move-a-view-up-only-when-the-keyboard-covers-an-input-field
         if (view.frame.origin.y == 0) && (self.activeTextField == self.bottomTextField) {
             view.frame.origin.y -= getKeyboardHeight(notification)
         }
