@@ -68,17 +68,11 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
 
     @IBAction func pickAnImageFromAlbum(_ sender: Any) {
-        let pickerController = UIImagePickerController()
-        pickerController.delegate = self
-        pickerController.sourceType = .photoLibrary
-        present(pickerController, animated: true, completion: nil)
+        presentViewController(source: .photoLibrary)
     }
     
     @IBAction func pickAnImageFromCamera(_ sender: Any) {
-        let pickerController = UIImagePickerController()
-        pickerController.delegate = self
-        pickerController.sourceType = .camera
-        present(pickerController, animated: true, completion: nil)
+        presentViewController(source: .camera)
     }
     
     // MARK: UIImagePickerControllerDelegate functions
@@ -158,6 +152,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         let keyboardSize = userInfo![UIResponder.keyboardFrameEndUserInfoKey] as! NSValue
             
         return keyboardSize.cgRectValue.height
+    }
+    
+    func presentViewController(source: UIImagePickerController.SourceType) {
+        let pickerController = UIImagePickerController()
+        pickerController.delegate = self
+        pickerController.sourceType = source
+        present(pickerController, animated: true, completion: nil)
     }
     
     func generateMemedImage() -> UIImage {
