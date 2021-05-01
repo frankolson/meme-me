@@ -43,6 +43,16 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         let meme = Meme(topText: topTextField.text!, bottomText: bottomTextField.text!, originalImage: imagePickerView.image!, memeImage: generateMemedImage())
         
         let controller = UIActivityViewController(activityItems: [meme.memeImage], applicationActivities: nil)
+        controller.completionWithItemsHandler = { (activityType: UIActivity.ActivityType?, completed: Bool, items: [Any]?, error: Error?) in
+            if completed {
+                print("Completed")
+                UIImageWriteToSavedPhotosAlbum(meme.memeImage, self, #selector(self.saveResults(_:didFinishSavingWithError:contextInfo:)), nil)
+            }
+            
+            if let error = error {
+                print("There was an error: \(error.localizedDescription)")
+            }
+        }
         present(controller, animated: true, completion: nil)
     }
 
@@ -160,6 +170,14 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         self.pickerToolbar.isHidden = false
 
         return memedImage
+    }
+    
+    @objc func saveResults(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer) {
+        if error != nil {
+            print("There was an error when saving the image")
+        } else {
+            print("Saved successfully")
+        }
     }
     
 }
