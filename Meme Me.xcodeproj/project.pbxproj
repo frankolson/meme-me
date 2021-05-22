@@ -17,7 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		BEAC707F263CB9E300272D75 /* Meme Me v1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Meme Me v1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BEAC707F263CB9E300272D75 /* Meme Me.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Meme Me.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEAC7082263CB9E300272D75 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BEAC7084263CB9E300272D75 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		BEAC7086263CB9E300272D75 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -42,7 +42,7 @@
 		BEAC7076263CB9E300272D75 = {
 			isa = PBXGroup;
 			children = (
-				BEAC7081263CB9E300272D75 /* Meme Me v1 */,
+				BEAC7081263CB9E300272D75 /* Meme Me */,
 				BEAC7080263CB9E300272D75 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -50,12 +50,12 @@
 		BEAC7080263CB9E300272D75 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BEAC707F263CB9E300272D75 /* Meme Me v1.app */,
+				BEAC707F263CB9E300272D75 /* Meme Me.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		BEAC7081263CB9E300272D75 /* Meme Me v1 */ = {
+		BEAC7081263CB9E300272D75 /* Meme Me */ = {
 			isa = PBXGroup;
 			children = (
 				BED642A2263DAD0A00B3AB28 /* Models */,
@@ -67,7 +67,7 @@
 				BEAC708D263CB9E400272D75 /* LaunchScreen.storyboard */,
 				BEAC7090263CB9E400272D75 /* Info.plist */,
 			);
-			path = "Meme Me v1";
+			path = "Meme Me";
 			sourceTree = "<group>";
 		};
 		BED642A2263DAD0A00B3AB28 /* Models */ = {
@@ -81,9 +81,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		BEAC707E263CB9E300272D75 /* Meme Me v1 */ = {
+		BEAC707E263CB9E300272D75 /* Meme Me */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BEAC7093263CB9E400272D75 /* Build configuration list for PBXNativeTarget "Meme Me v1" */;
+			buildConfigurationList = BEAC7093263CB9E400272D75 /* Build configuration list for PBXNativeTarget "Meme Me" */;
 			buildPhases = (
 				BEAC707B263CB9E300272D75 /* Sources */,
 				BEAC707C263CB9E300272D75 /* Frameworks */,
@@ -93,9 +93,9 @@
 			);
 			dependencies = (
 			);
-			name = "Meme Me v1";
+			name = "Meme Me";
 			productName = "Image Picker";
-			productReference = BEAC707F263CB9E300272D75 /* Meme Me v1.app */;
+			productReference = BEAC707F263CB9E300272D75 /* Meme Me.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -112,7 +112,7 @@
 					};
 				};
 			};
-			buildConfigurationList = BEAC707A263CB9E300272D75 /* Build configuration list for PBXProject "Meme Me v1" */;
+			buildConfigurationList = BEAC707A263CB9E300272D75 /* Build configuration list for PBXProject "Meme Me" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -125,7 +125,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BEAC707E263CB9E300272D75 /* Meme Me v1 */,
+				BEAC707E263CB9E300272D75 /* Meme Me */,
 			);
 		};
 /* End PBXProject section */
@@ -300,13 +300,13 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7PW8WHRZ6Q;
-				INFOPLIST_FILE = "$(SRCROOT)/Meme Me v1/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Meme Me/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "testbed.Image-Picker";
+				PRODUCT_BUNDLE_IDENTIFIER = "testbed.Meme-Me";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -320,13 +320,13 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7PW8WHRZ6Q;
-				INFOPLIST_FILE = "$(SRCROOT)/Meme Me v1/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Meme Me/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "testbed.Image-Picker";
+				PRODUCT_BUNDLE_IDENTIFIER = "testbed.Meme-Me";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -336,7 +336,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		BEAC707A263CB9E300272D75 /* Build configuration list for PBXProject "Meme Me v1" */ = {
+		BEAC707A263CB9E300272D75 /* Build configuration list for PBXProject "Meme Me" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BEAC7091263CB9E400272D75 /* Debug */,
@@ -345,7 +345,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BEAC7093263CB9E400272D75 /* Build configuration list for PBXNativeTarget "Meme Me v1" */ = {
+		BEAC7093263CB9E400272D75 /* Build configuration list for PBXNativeTarget "Meme Me" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BEAC7094263CB9E400272D75 /* Debug */,
