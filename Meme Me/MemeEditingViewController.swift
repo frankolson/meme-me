@@ -7,7 +7,15 @@
 
 import UIKit
 
-class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
+// MARK: - MemeEditingViewController
+
+class MemeEditingViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
+    
+    // MARK: Properties
+    
+    var activeTextField: UITextField?
+    
+    // MARK: Outlets
 
     @IBOutlet weak var imagePickerView: UIImageView!
     @IBOutlet weak var cameraButton: UIBarButtonItem!
@@ -16,11 +24,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var mainToolbar: UIToolbar!
     @IBOutlet weak var pickerToolbar: UIToolbar!
     
-    var activeTextField: UITextField?
+    // MARK: Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         
         setTextFieldAttributes(topTextField, startText: "TOP")
         setTextFieldAttributes(bottomTextField, startText: "BOTTOM")
@@ -40,8 +47,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     // MARK: Actions
     
     @IBAction func share(_ sender: Any) {
-        let meme = Meme(topText: topTextField.text!, bottomText: bottomTextField.text!, originalImage: imagePickerView.image!, memeImage: generateMemedImage())
-        
+        let meme = generateAndSaveMeme()
         let controller = UIActivityViewController(activityItems: [meme.memeImage], applicationActivities: nil)
         
         // picked up the following from this site:
@@ -75,7 +81,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         presentViewController(source: .camera)
     }
     
-    // MARK: UIImagePickerControllerDelegate functions
+    // MARK: Impage Picker Implementation
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         dismiss(animated: true, completion: nil)
@@ -89,7 +95,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         dismiss(animated: true, completion: nil)
     }
     
-    // MARK: UITextFieldDelegate functions
+    // MARK: Text Field Implementation
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
         self.activeTextField = textField
@@ -104,8 +110,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         textField.resignFirstResponder()
         return true
     }
-    
-    // MARK: Helper methods
     
     func setTextFieldAttributes(_ textField: UITextField, startText: String) {
         let memeTextAttributes: [NSAttributedString.Key: Any] = [
@@ -161,6 +165,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         present(pickerController, animated: true, completion: nil)
     }
     
+    // MARK: Meme Generation
+    
     func generateMemedImage() -> UIImage {
         // Hide toolbar and navbar
         self.mainToolbar.isHidden = true
@@ -177,6 +183,17 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         self.pickerToolbar.isHidden = false
 
         return memedImage
+    }
+    
+    // MARK: Saving
+    
+    func generateAndSaveMeme() -> Meme {
+        let meme = Meme(topText: topTextField.text!, bottomText: bottomTextField.text!, originalImage: imagePickerView.image!, memeImage: generateMemedImage())
+        
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.memes.append(meme)
+        
+        return meme
     }
     
     @objc func saveResults(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer) {
