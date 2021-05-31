@@ -57,6 +57,7 @@ class MemeEditingViewController: UIViewController, UIImagePickerControllerDelega
                 // picked up the following from this site:
                 // https://www.hackingwithswift.com/example-code/media/uiimagewritetosavedphotosalbum-how-to-write-to-the-ios-photo-album
                 UIImageWriteToSavedPhotosAlbum(meme.memeImage, self, #selector(self.saveResults(_:didFinishSavingWithError:contextInfo:)), nil)
+                self.endEditing()
             }
             
             if let error = error {
@@ -71,6 +72,8 @@ class MemeEditingViewController: UIViewController, UIImagePickerControllerDelega
         self.topTextField.text = "TOP"
         self.bottomTextField.text = "BOTTOM"
         self.activeTextField = nil
+        
+        self.endEditing()
     }
 
     @IBAction func pickAnImageFromAlbum(_ sender: Any) {
@@ -204,5 +207,10 @@ class MemeEditingViewController: UIViewController, UIImagePickerControllerDelega
         }
     }
     
+    // MARK: Canceling
+    
+    func endEditing() {
+        self.dismiss(animated: true, completion: nil)
+    }
 }
 
