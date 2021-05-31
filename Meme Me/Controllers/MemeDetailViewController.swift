@@ -6,3 +6,11 @@
 //
 
 import Foundation
+import UIKit
+
+class MemeDetailViewController: UIViewController {
+    
+    // MARK: Outlets
+
+    @IBOutlet weak var memeImage: UIImageView!
+}

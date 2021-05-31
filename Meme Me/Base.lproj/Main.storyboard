@@ -106,7 +106,7 @@
         <!--Meme Detail View Controller-->
         <scene sceneID="8H3-em-LMo">
             <objects>
-                <viewController id="6FT-qF-mRF" userLabel="Meme Detail View Controller" sceneMemberID="viewController">
+                <viewController id="6FT-qF-mRF" userLabel="Meme Detail View Controller" customClass="MemeDetailViewController" customModule="Meme_Me" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="H65-zZ-RKO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -124,6 +124,9 @@
                             <constraint firstItem="n3N-Ya-QY4" firstAttribute="centerY" secondItem="ghx-Pv-rVd" secondAttribute="centerY" id="t7u-lR-3R7"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="memeImage" destination="n3N-Ya-QY4" id="wlw-go-WwV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zta-Og-8hy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
