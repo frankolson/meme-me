@@ -39,6 +39,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BE273915266571AB001DBC74 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BEAC7086263CB9E300272D75 /* MemeEditingViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		BEAC7076263CB9E300272D75 = {
 			isa = PBXGroup;
 			children = (
@@ -58,10 +66,10 @@
 		BEAC7081263CB9E300272D75 /* Meme Me */ = {
 			isa = PBXGroup;
 			children = (
+				BE273915266571AB001DBC74 /* Controllers */,
 				BED642A2263DAD0A00B3AB28 /* Models */,
 				BEAC7082263CB9E300272D75 /* AppDelegate.swift */,
 				BEAC7084263CB9E300272D75 /* SceneDelegate.swift */,
-				BEAC7086263CB9E300272D75 /* MemeEditingViewController.swift */,
 				BEAC7088263CB9E300272D75 /* Main.storyboard */,
 				BEAC708B263CB9E400272D75 /* Assets.xcassets */,
 				BEAC708D263CB9E400272D75 /* LaunchScreen.storyboard */,
