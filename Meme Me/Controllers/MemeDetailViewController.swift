@@ -10,7 +10,17 @@ import UIKit
 
 class MemeDetailViewController: UIViewController {
     
+    // MARK: Properties
+    
+    var meme: Meme?
+    
     // MARK: Outlets
 
     @IBOutlet weak var memeImage: UIImageView!
+    
+    // MARK: Life Cycle
+    
+    override func viewDidLoad() {
+        self.memeImage.image = meme?.memeImage
+    }
 }
