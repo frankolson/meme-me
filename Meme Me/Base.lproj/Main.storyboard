@@ -160,26 +160,46 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="memeTableCell" textLabel="ZcF-Uw-KAI" imageView="BMN-3q-Ypd" style="IBUITableViewCellStyleDefault" id="Llb-Oi-UYg">
-                                <rect key="frame" x="0.0" y="24.5" width="414" height="43.5"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="memeTableCell" id="Llb-Oi-UYg" customClass="TableViewCell" customModule="Meme_Me" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="24.5" width="414" height="120.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Llb-Oi-UYg" id="8mQ-a4-9dx">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="120.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ZcF-Uw-KAI">
-                                            <rect key="frame" x="117" y="0.0" width="277" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="cool_image" id="BMN-3q-Ypd">
-                                            <rect key="frame" x="20" y="0.0" width="82" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </imageView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="edq-bZ-61r">
+                                            <rect key="frame" x="0.0" y="0.0" width="404" height="120.5"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cool_image" translatesAutoresizingMaskIntoConstraints="NO" id="OH9-0Q-BgH">
+                                                    <rect key="frame" x="0.0" y="0.0" width="160" height="120.5"/>
+                                                    <color key="backgroundColor" red="0.2101244014320951" green="0.2101244014320951" blue="0.2101244014320951" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="160" id="QY3-Rc-fpV"/>
+                                                        <constraint firstAttribute="height" constant="120" id="azy-0y-qX1"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jD4-ML-Sz6">
+                                                    <rect key="frame" x="170" y="0.0" width="234" height="120.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="edq-bZ-61r" secondAttribute="trailing" constant="10" id="LmU-L0-xqa"/>
+                                        <constraint firstAttribute="bottom" secondItem="edq-bZ-61r" secondAttribute="bottom" id="mtE-Di-oIC"/>
+                                        <constraint firstItem="edq-bZ-61r" firstAttribute="top" secondItem="8mQ-a4-9dx" secondAttribute="top" id="w3V-F7-pfK"/>
+                                        <constraint firstItem="edq-bZ-61r" firstAttribute="leading" secondItem="8mQ-a4-9dx" secondAttribute="leading" id="yBi-aa-sfQ"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="imageView" destination="OH9-0Q-BgH" id="q4N-dh-QCq"/>
+                                    <outlet property="memeImageView" destination="OH9-0Q-BgH" id="BvD-N2-VHA"/>
+                                    <outlet property="memeTextLabel" destination="jD4-ML-Sz6" id="1u6-wm-6oF"/>
+                                    <outlet property="textLabel" destination="jD4-ML-Sz6" id="Z6t-Xb-U2q"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
