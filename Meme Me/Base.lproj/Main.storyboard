@@ -106,7 +106,7 @@
         <!--Meme Detail View Controller-->
         <scene sceneID="8H3-em-LMo">
             <objects>
-                <viewController id="6FT-qF-mRF" userLabel="Meme Detail View Controller" customClass="MemeDetailViewController" customModule="Meme_Me" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MemeDetailViewController" id="6FT-qF-mRF" userLabel="Meme Detail View Controller" customClass="MemeDetailViewController" customModule="Meme_Me" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="H65-zZ-RKO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
