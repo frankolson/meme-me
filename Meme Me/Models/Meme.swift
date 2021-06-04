@@ -18,11 +18,3 @@ struct Meme {
         return "\(topText), \(bottomText)"
     }
 }
-
-extension Meme {
-    static var allMemes: [Meme] {
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        
-        return appDelegate.memes
-    }
-}
