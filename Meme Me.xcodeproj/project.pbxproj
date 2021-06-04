@@ -18,6 +18,7 @@
 		BEAC708F263CB9E400272D75 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEAC708D263CB9E400272D75 /* LaunchScreen.storyboard */; };
 		BED642A4263DAD2400B3AB28 /* Meme.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED642A3263DAD2400B3AB28 /* Meme.swift */; };
 		BEE393972669C4640096530A /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE393962669C4640096530A /* TableViewCell.swift */; };
+		BEE393992669C99F0096530A /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE393982669C99F0096530A /* CollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		BEAC7090263CB9E400272D75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BED642A3263DAD2400B3AB28 /* Meme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meme.swift; sourceTree = "<group>"; };
 		BEE393962669C4640096530A /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		BEE393982669C99F0096530A /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				BEE393962669C4640096530A /* TableViewCell.swift */,
+				BEE393982669C99F0096530A /* CollectionViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -178,6 +181,7 @@
 			files = (
 				BEAC7087263CB9E300272D75 /* MemeEditingViewController.swift in Sources */,
 				BEE393972669C4640096530A /* TableViewCell.swift in Sources */,
+				BEE393992669C99F0096530A /* CollectionViewCell.swift in Sources */,
 				BED642A4263DAD2400B3AB28 /* Meme.swift in Sources */,
 				BE27391B26657270001DBC74 /* SentMemesCollectionViewController.swift in Sources */,
 				BEAC7083263CB9E300272D75 /* AppDelegate.swift in Sources */,
